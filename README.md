@@ -26,6 +26,8 @@ It leverages state-of-the-art Deep Learning (ResNet50), Explainable AI (Grad-CAM
 - **Dockerized:** Fully containerized application for easy deployment on any cloud platform (AWS, Azure, GCP).
 
 ### 5. ⚙️ Robust Training Pipeline
+- **Hybrid Dataset:** Combines multiple open-source datasets (Paul Mooney, Tawsifur Rahman, Prashant268, NIH, Bachrr) to create a massive and diverse training set (~25,000 images).
+- **Class Imbalance Handling:** Implements **Weighted Loss (CrossEntropy)** to ensure the model treats rare COVID-19 cases with equal importance to common Normal cases.
 - **Data Augmentation:** Albumentations (Rotate, Affine, Noise, Blur) to prevent overfitting.
 - **Optimization:** Adam optimizer, Weight Decay, and Learning Rate Scheduler (ReduceLROnPlateau).
 - **MLflow Tracking:** Full experiment tracking for metrics and model versioning.
@@ -34,20 +36,20 @@ It leverages state-of-the-art Deep Learning (ResNet50), Explainable AI (Grad-CAM
 
 ## 📊 Model Performance
 
-The model was trained on a combined dataset of over 15,000 Chest X-Rays.
+The model was trained on a massive hybrid dataset of **25,194 Chest X-Rays**.
 
 **Best Model Metrics (Validation Set):**
-*   **Accuracy:** 97.69%
-*   **Precision (Weighted):** 98%
-*   **Recall (Weighted):** 98%
-*   **F1-Score (Weighted):** 98%
+*   **Accuracy:** 97.72%
+*   **Precision (Weighted):** 97%
+*   **Recall (Weighted):** 97%
+*   **F1-Score (Weighted):** 97%
 
 **Class-wise Performance:**
 | Class | Precision | Recall | F1-Score |
 | :--- | :---: | :---: | :---: |
 | **NORMAL** | 96% | 99% | 98% |
 | **PNEUMONIA** | 99% | 97% | 98% |
-| **COVID-19** | 99% | 95% | 97% |
+| **COVID-19** | 98% | 93% | 96% |
 
 *Note: The model uses aggressive data augmentation and a confidence threshold mechanism to minimize false positives.*
 
