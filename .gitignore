@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+
+# Mac
+.DS_Store
+
+# Logs
+*.log
+
+# MLflow
+mlruns/
+
+# Large Model Files (Optional: You might want to use Git LFS for these, but for now let's ignore or include depending on size. 
+# The .pth file is likely > 100MB. GitHub has a 100MB limit.
+# I will ignore the models directory for now to avoid errors, or user can use LFS.)
+models/*.pth
+
+# IDE
+.vscode/
+.idea/

@@ -1,0 +1,15 @@
+kagglehub
+torch
+torchvision
+torchaudio
+pandas
+matplotlib
+seaborn
+scikit-learn
+opencv-python
+streamlit
+albumentations
+grad-cam
+pillow
+numpy
+mlflow
